@@ -26,7 +26,7 @@ public class Car extends Vehicle implements Steerable {
         super(ms,year,ftype);
         numOfDoors = numDoors;
         
-        
+          
     }
     @Override
     public boolean alterHeading(double degrees){
