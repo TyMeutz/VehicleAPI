@@ -5,13 +5,14 @@
  */
 package vehicleapi;
 
+import vehicleapi.interfaces.Brakeable;
 import vehicleapi.interfaces.Steerable;
 
 /**
  *
  * @author ty.meutz
  */
-public class Car extends Vehicle implements Steerable {
+public class Car extends Vehicle implements Steerable, Brakeable {
     int numOfDoors = 0;
     int currentGear = 0;
     double totalMiles = 0.0;
@@ -42,6 +43,21 @@ public class Car extends Vehicle implements Steerable {
     public boolean resetSteering(){
         steeringWheelPosition = 0.0;
         return true;
+    }
+
+    @Override
+    public boolean brakeEngaged() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean applyBreak(int deg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean applyEmergencyBreak() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
 

@@ -33,22 +33,42 @@ public class Vehicle {
         this.model = model;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getSpeed() {
         return speed;
     }
 
+    /**
+     *
+     * @param speed
+     */
     public void setSpeed(int speed) {
         this.speed = speed;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getMaxSpeed() {
         return maxSpeed;
     }
 
+    /**
+     *
+     * @param maxSpeed
+     */
     public void setMaxSpeed(int maxSpeed) {
         this.maxSpeed = maxSpeed;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getYearOfOrigin() {
         return yearOfOrigin;
     }

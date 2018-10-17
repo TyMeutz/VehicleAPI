@@ -6,12 +6,14 @@
 package vehicleapi;
 
 import vehicleapi.interfaces.Boardable;
+import vehicleapi.interfaces.Brakeable;
+
 
 /**
  *
  * @author ty.meutz
  */
-public class Train extends Vehicle implements Boardable {
+public class Train extends Vehicle implements Boardable, Brakeable {
     int numberOfWheels;
     int numberOfCarts;
     int weight;
@@ -27,12 +29,37 @@ public class Train extends Vehicle implements Boardable {
         this.weight = weight;
         
     }
+    
+    /**
+     *
+     * @return
+     */
+    @Override
     public int getMaxPassengers(){
         return maxPassengers;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public boolean isOverSold() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean brakeEngaged() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean applyBreak(int deg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean applyEmergencyBreak() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
