@@ -20,8 +20,8 @@ public class Train extends Vehicle implements Boardable {
     Train(){
         
     }
-    Train(int ms, int year, String ftype, int numberOfWheels, int numberOfCarts, int weight){
-        super(ms,year,ftype);
+    Train(int ms, int year, String ftype, String make, String model, int numberOfWheels, int numberOfCarts, int weight){
+        super(ms,year,ftype,make,model);
         this.numberOfWheels = numberOfWheels;
         this.numberOfCarts = numberOfCarts;
         this.weight = weight;

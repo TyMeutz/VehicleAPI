@@ -22,8 +22,8 @@ public class Car extends Vehicle implements Steerable {
     
     }
     
-    Car(int numDoors, int ms, int year, String ftype){
-        super(ms,year,ftype);
+    Car(int numDoors, int ms, int year, String ftype, String make, String model){
+        super(ms,year,ftype,make,model);
         numOfDoors = numDoors;
         
           

@@ -5,6 +5,7 @@
  */
 package vehicleapi;
 
+import java.util.Objects;
 import vehicleapi.interfaces.Steerable;
 
 /**
@@ -16,15 +17,20 @@ public class Vehicle {
     int maxSpeed = 0;
     int yearOfOrigin = 0;
     String fuelType = "";
+    String make = "";
+    String model = "";
+    
     
     Vehicle(){
         
     }
     
-    Vehicle(int ms, int year, String ftype){
-        maxSpeed = ms;
-        yearOfOrigin = year;
-        fuelType = ftype;
+    Vehicle(int ms, int year, String ftype, String make, String model){
+        this.maxSpeed = ms;
+        this.yearOfOrigin = year;
+        this.fuelType = ftype;
+        this.make = make;
+        this.model = model;
     }
 
     public int getSpeed() {
@@ -58,5 +64,51 @@ public class Vehicle {
     public void setFuelType(String fuelType) {
         this.fuelType = fuelType;
     }
-    
+
+    public String getMake() {
+        return make;
+    }
+
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 23 * hash + this.yearOfOrigin;
+        hash = 23 * hash + Objects.hashCode(this.make);
+        hash = 23 * hash + Objects.hashCode(this.model);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        final Vehicle other = (Vehicle) obj;
+        if (this.yearOfOrigin != other.yearOfOrigin) {
+            return false;
+        }
+        if (!Objects.equals(this.make, other.make)) {
+            return false;
+        }
+        if (!Objects.equals(this.model, other.model)) {
+            return false;
+        }
+        return true;
+    }
+    @Override 
+    public String toString(){
+        return yearOfOrigin + " " + make + " " + model ;  
+    }
 }
